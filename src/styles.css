@@ -1,0 +1,78 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(14, 100px);
+  grid-gap: 1rem;
+  padding: 4rem 0;
+  position: relative;
+  width: 65%;
+}
+
+.card{
+  border-radius: .5rem;
+  border: 1px solid rgba(191, 188, 188, 0.391);
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.091);
+}
+
+.articulo {
+  display: none;
+}
+
+.cerrar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+img{
+  height: 100% !important;
+  width: 100%;
+  border-radius: .5rem;
+}
+
+
+.card:nth-child(1), .card:nth-child(2), .card:nth-child(3){
+ grid-row: span 3;
+}
+.card:nth-child(4){
+  grid-row: span 3;
+}
+.card:nth-child(5), .card:nth-child(6){
+  grid-row: span 3;
+}
+.card:nth-child(7){
+  grid-column: span 2;
+  grid-row: span 3; 
+}
+.card:nth-child(8){
+  grid-row: span 3; 
+}
+.card:nth-child(9){
+  grid-row: span 3; 
+}
+.card:nth-child(10){
+  grid-column: span 2;
+  grid-row: span 3; 
+}
+.card:nth-child(11){
+  grid-column: span 2;
+  grid-row: span 3;
+}
+.card:nth-child(12){
+  grid-row: span 3;
+}
+
+
+@media screen and (max-width: 450px) {
+  #container{
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+}
