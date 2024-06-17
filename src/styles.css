@@ -15,6 +15,7 @@
 }
 
 .card{
+  cursor: pointer;
   border-radius: .5rem;
   border: 1px solid rgba(191, 188, 188, 0.391);
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.091);
